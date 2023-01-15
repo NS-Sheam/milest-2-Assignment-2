@@ -101,6 +101,7 @@ body{
     margin: 80px 0 120px 0;
     display: flex;
     gap: 50px;
+    padding-left: 20px;
 }
 .feature-gallery{
     display: grid;
@@ -139,6 +140,7 @@ body{
 .feature-btn{
     width: 30%;
 }
+/* ----------Our features section ends---------- */
 /* ----------Our services section starts---------- */
 .our-services{
     display: flex;
@@ -177,10 +179,12 @@ body{
 }
 .service-items{
     display: flex;
+    gap: 20px;
     flex-direction: column;
 }
 .item{
     padding: 30px;
+    box-shadow: 1px 1px 5px rgb(214, 214, 214);
 }
 .item-title{
     font-size: 20px;
@@ -211,7 +215,7 @@ body{
 /* ----------Our services section ends---------- */
 /* ----------Some fact section starts---------- */
 .some-fact{
-    margin: 120px auto;
+    margin: 90px 0;
 }
 .fact-descriptions{
     width: 50%;
@@ -254,11 +258,68 @@ body{
     color: #424242;
     font-weight: 600;
 }
+.achieve .img{
+    animation: rotate .2s linear 5;
+}
+
+/* ----------Animation starts--------- */
+@keyframes rotate {
+    0%{
+        transform: rotate(90deg);
+    }
+    25%{
+        transform: rotate(180deg);
+    }
+    75%{
+        transform: rotate(270deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+/* ----------Animation ends--------- */
 /* ----------Some fact section ends---------- */
 /* ----------Our sponspors section ends---------- */
-/* ----------Ous sponspors section starts---------- */
 
-/* ----------Our features section ends---------- */
+.sponsors-descriptions{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 50%;
+    margin-bottom: 50px;
+    margin-left: 20px;
+}
+.sponsors-title{
+    font-size: 45px;
+    font-weight: 700;
+    color: var(--font-primary);
+}
+.sponsors-description{
+    font-size: 16px;
+    color: var(--font-secondary);
+    line-height: 26px;
+}
+.sponsors{
+    display: flex;
+    gap: 90px;
+    justify-content: center;
+    align-items: center;
+}
+.sponsor img{
+    filter: grayscale(100%);
+}
+/* ----------Ous sponspors section starts---------- */
+/* ----------Footer section starts---------- */
+.footer p{
+    font-size: 20px;
+    color: #424242;
+    padding: 35px 20px;
+    text-align: center;
+    background-color:#FFF4E7;
+    margin-top: 120px;
+}
+/* ----------Footer section ends---------- */
+
 /* ----------Media query section starts---------- */
 /* ----------For small devices---------- */
 @media only screen and (max-width: 576px) {
@@ -425,6 +486,40 @@ body{
     .achieve p{
         font-size: 10px;
     }
+    /* ----------Our sponsors section starts---------- */
+    .sponsors-descriptions{
+        gap: 20px;
+        width: 80%;
+        margin: 0 auto 30px auto;
+        text-align: center;
+    }
+    .sponsors-title{
+        font-size: 30px;
+    }
+    .sponsors-description{
+        font-size: 14px;
+        line-height: 21px;
+    }
+    .sponsors{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+
+    }
+    .sponsor{
+        width: 25%;
+    }
+    .sponsor img{
+        width: 80%;
+    }
+    /* ----------Footer siction starts---------- */
+    .footer p{
+        font-size: 15px;
+        margin-top: 90px;
+        line-height: 22px;
+        padding: 20px;
+    }
+    
     
 }
 /* ----------For mediun devices---------- */
@@ -569,6 +664,27 @@ body{
     }
     .achieve p{
         font-size: 15px;
+    }
+    /* ----------Our sponsors section starts---------- */
+    .sponsors-descriptions{
+        gap: 25px;
+        width: 80%;
+        margin: 0 auto 40px auto;
+        text-align: center;
+    }
+    .sponsors-title{
+        font-size: 30px;
+    }
+    .sponsors{
+        flex-wrap: wrap;
+        gap: 20px;
+
+    }
+    .sponsor{
+        width: 25%;
+    }
+    .sponsor img{
+        width: 80%;
     }
         
 }
