@@ -166,63 +166,6 @@ body {
 }
 
 /* ----------Our features section ends---------- */
-/* ----------Our projects section starts---------- */
-.our-projects>h2 {
-    font-size: 45px;
-    columns: var(--font-primary);
-    text-align: center;
-}
-
-.projects {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-    margin: 40px 20px;
-}
-
-.project {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    box-shadow: 1px 1px 5px rgb(221, 221, 221);
-    align-self: normal;
-    flex: 1;
-}
-
-.project .img {
-    height: 100%;
-}
-
-.project .img img {
-    width: 100%;
-    height: 100%;
-}
-
-.project-descriptions {
-    padding: 20px;
-}
-
-.project-title {
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--font-primary);
-}
-
-.project-description {
-    font-size: 16px;
-    color: var(--font-secondary);
-    line-height: 26px;
-}
-
-.projects .btn button {
-    color: var(--primary-color);
-    background-color: transparent;
-    font-size: 20px;
-}
-
-/* ----------Our projects section ends---------- */
 /* ----------Our services section starts---------- */
 .our-services {
     display: flex;
@@ -352,6 +295,7 @@ body {
     width: 25%;
     height: 100%;
     text-align: center;
+    transition: all 0.6s linear;
 }
 
 .achieve h2 {
@@ -359,8 +303,10 @@ body {
     color: #424242;
     font-weight: 600;
 }
-
-.some-fact:hover .achieve .img {
+.achieve:hover{
+    transform: scale(1.2);
+}
+.achieve:hover .img {
     animation: rotate .2s linear 3;
 }
 
@@ -385,6 +331,63 @@ body {
 
 /* ----------Animation ends--------- */
 /* ----------Some fact section ends---------- */
+/* ----------Our projects section starts---------- */
+.our-projects>h2 {
+    font-size: 45px;
+    columns: var(--font-primary);
+    text-align: center;
+}
+
+.projects {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 20px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 1px 1px 5px rgb(221, 221, 221);
+    align-self: normal;
+    flex: 1;
+}
+
+.project .img {
+    height: 100%;
+}
+
+.project .img img {
+    width: 100%;
+    height: 100%;
+}
+
+.project-descriptions {
+    padding: 20px;
+}
+
+.project-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--font-primary);
+}
+
+.project-description {
+    font-size: 16px;
+    color: var(--font-secondary);
+    line-height: 26px;
+}
+
+.projects .btn button {
+    color: var(--primary-color);
+    background-color: transparent;
+    font-size: 20px;
+}
+
+/* ----------Our projects section ends---------- */
 /* ----------Our sponspors section ends---------- */
 
 .sponsors-descriptions {
@@ -788,7 +791,11 @@ body {
     }
 
     .our-services {
-        gap: 0;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .service-items{
+        flex-direction: row;
     }
 
     .service-title {
@@ -812,7 +819,9 @@ body {
         font-size: 16px;
         line-height: 26px;
     }
-
+    .our-services .service-img {
+        width: 70%;
+    }
 
     .experience {
         font-size: 45px;
@@ -907,13 +916,20 @@ body {
 }
 
 /* ----------For large devices---------- */
-@media only screen and (min-width: 992px) and (max-width: 1200px) {}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .feature-gallery{
+        margin-left: 20px;
+    }
+}
 
 /* ----------For extra large devices---------- */
 @media only screen and (min-width: 1200px) {
     .experience {
         margin-left: 45%;
         margin-top: -10%;
+    }
+    .feature-gallery{
+        margin-left: 20px;
     }
 }
 
